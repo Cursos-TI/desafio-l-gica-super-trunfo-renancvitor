@@ -182,70 +182,116 @@ void compararAtributoEscolhido()
     printf("1 - População\n");
     printf("2 - Área\n");
     printf("3 - PIB\n");
-    printf("4 - PIB per capita\n");
-    printf("5 - Pontos turísticos\n");
+    printf("4 - Densidade Populacional\n");
+    printf("5 - PIB per capita\n");
     printf("========================================\n");
     printf("Digite o número do atributo: ");
     scanf("%d", &atributo);
 
-    if (atributo == 1)
+    switch (atributo)
     {
+    case 1:
         printf("\nComparação de cartas (Atributo: População):\n");
-
         printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
         printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
+        break;
+    case 2:
+        printf("\nComparação de cartas (Atributo: Área):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", area);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", area2);
+        break;
+    case 3:
+        printf("\nComparação de cartas (Atributo: PIB):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", pib);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", pib2);
+        break;
+    case 4:
+        printf("\nComparação de cartas (Atributo: Densidade Populacional):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", densidadePopulacional);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", densidadePopulacional2);
+        break;
+    case 5:
+        printf("\nComparação de cartas (Atributo: PIB per capita):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", pibPerCapta);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", pibPerCapta2);
+        break;
+    default:
+        break;
+    }
 
+    if (atributo == 1)
+    {
         if (populacao > populacao2)
         {
-            printf("\nResultado: %s carta (%s) venceu!", populacao > populacao2 ? "Primeira" : "Segunda", populacao > populacao2 ? nomeCidade : nomeCidade2);
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (populacao < populacao2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
         }
     }
     else if (atributo == 2)
     {
-        printf("\nComparação de cartas (Atributo: Área):\n");
-
-        printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
-        printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
-
         if (area > area2)
         {
-            printf("\nResultado: %s carta (%s) venceu!", area > area2 ? "Primeira" : "Segunda", area > area2 ? nomeCidade : nomeCidade2);
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (area < area2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
         }
     }
     else if (atributo == 3)
     {
-        printf("\nComparação de cartas (Atributo: PIB):\n");
-
-        printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
-        printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
-
         if (pib > pib2)
         {
-            printf("\nResultado: %s carta (%s) venceu!", pib > pib2 ? "Primeira" : "Segunda", pib > pib2 ? nomeCidade : nomeCidade2);
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (pib < pib2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
         }
     }
     else if (atributo == 4)
     {
-        printf("\nComparação de cartas (Atributo: Densidade Populacional):\n");
-
-        printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
-        printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
-
-        if (densidadePopulacional > densidadePopulacional2)
+        if (densidadePopulacional < densidadePopulacional2)
         {
-            printf("\nResultado: %s carta (%s) venceu!", densidadePopulacional > densidadePopulacional2 ? "Primeira" : "Segunda", densidadePopulacional > densidadePopulacional2 ? nomeCidade : nomeCidade2);
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (densidadePopulacional > densidadePopulacional2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
         }
     }
     else if (atributo == 5)
     {
-        printf("\nComparação de cartas (Atributo: PIB per capita):\n");
-
-        printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
-        printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
-
         if (pibPerCapta > pibPerCapta2)
         {
-            printf("\nResultado: %s carta (%s) venceu!", pibPerCapta > pibPerCapta2 ? "Primeira" : "Segunda", pibPerCapta > pibPerCapta2 ? nomeCidade : nomeCidade2);
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (pibPerCapta < pibPerCapta2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
         }
     }
     else
