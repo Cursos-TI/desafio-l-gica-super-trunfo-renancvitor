@@ -171,7 +171,7 @@ double superPoderCarta2()
 
 void compararAtributoEscolhido()
 {
-    int atributo;
+    int atributo1, atributo2;
 
     densidadePopulacional = calcularDensidadePopulacional();
     pibPerCapta = calcularPibPerCapta();
@@ -185,10 +185,21 @@ void compararAtributoEscolhido()
     printf("4 - Densidade Populacional\n");
     printf("5 - PIB per capita\n");
     printf("========================================\n");
-    printf("Digite o número do atributo: ");
-    scanf("%d", &atributo);
 
-    switch (atributo)
+    printf("\nDigite o número do primeiro atributo: ");
+    scanf("%d", &atributo1);
+
+    printf("Digite o número do segundo atributo: ");
+    scanf("%d", &atributo2);
+
+    if (atributo1 == atributo2)
+    {
+        printf("\nErro: Você não pode escolher o mesmo atributo duas vezes. Tente novamente.\n");
+        return compararAtributoEscolhido(); // Perguntar ao ChatGPT se é possível fazer isso em C
+    }
+
+    printf("\nPrimeiro atributo escolhido:\n");
+    switch (atributo1)
     {
     case 1:
         printf("\nComparação de cartas (Atributo: População):\n");
@@ -219,7 +230,7 @@ void compararAtributoEscolhido()
         break;
     }
 
-    if (atributo == 1)
+    if (atributo1 == 1)
     {
         if (populacao > populacao2)
         {
@@ -234,7 +245,7 @@ void compararAtributoEscolhido()
             printf("\nTemos um empate!");
         }
     }
-    else if (atributo == 2)
+    else if (atributo1 == 2)
     {
         if (area > area2)
         {
@@ -249,7 +260,7 @@ void compararAtributoEscolhido()
             printf("\nTemos um empate!");
         }
     }
-    else if (atributo == 3)
+    else if (atributo1 == 3)
     {
         if (pib > pib2)
         {
@@ -264,7 +275,7 @@ void compararAtributoEscolhido()
             printf("\nTemos um empate!");
         }
     }
-    else if (atributo == 4)
+    else if (atributo1 == 4)
     {
         if (densidadePopulacional < densidadePopulacional2)
         {
@@ -279,7 +290,120 @@ void compararAtributoEscolhido()
             printf("\nTemos um empate!");
         }
     }
-    else if (atributo == 5)
+    else if (atributo1 == 5)
+    {
+        if (pibPerCapta > pibPerCapta2)
+        {
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (pibPerCapta < pibPerCapta2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
+        }
+    }
+    else
+    {
+        printf("\nValor não reconhecido, encerrando...\n");
+    }
+
+    printf("\n");
+    printf("\nSegundo atributo escolhido:\n");
+    switch (atributo2)
+    {
+    case 1:
+        printf("\nComparação de cartas (Atributo: População):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %lu", populacao);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %lu", populacao2);
+        break;
+    case 2:
+        printf("\nComparação de cartas (Atributo: Área):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", area);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", area2);
+        break;
+    case 3:
+        printf("\nComparação de cartas (Atributo: PIB):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", pib);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", pib2);
+        break;
+    case 4:
+        printf("\nComparação de cartas (Atributo: Densidade Populacional):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", densidadePopulacional);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", densidadePopulacional2);
+        break;
+    case 5:
+        printf("\nComparação de cartas (Atributo: PIB per capita):\n");
+        printf("\nPrimeira carta - São Paulo (SP): %.2lf", pibPerCapta);
+        printf("\nSegunda carta - Rio de Janeiro (RJ): %.2lf", pibPerCapta2);
+        break;
+    default:
+        break;
+    }
+
+    if (atributo2 == 1)
+    {
+        if (populacao > populacao2)
+        {
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (populacao < populacao2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
+        }
+    }
+    else if (atributo2 == 2)
+    {
+        if (area > area2)
+        {
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (area < area2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
+        }
+    }
+    else if (atributo2 == 3)
+    {
+        if (pib > pib2)
+        {
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (pib < pib2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
+        }
+    }
+    else if (atributo2 == 4)
+    {
+        if (densidadePopulacional < densidadePopulacional2)
+        {
+            printf("\nResultado: Primeira carta (%s) venceu!", nomeCidade);
+        }
+        else if (densidadePopulacional > densidadePopulacional2)
+        {
+            printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
+        }
+        else
+        {
+            printf("\nTemos um empate!");
+        }
+    }
+    else if (atributo2 == 5)
     {
         if (pibPerCapta > pibPerCapta2)
         {
@@ -340,6 +464,10 @@ int main()
     entradaDados();
     saidaDados();
     compararAtributoEscolhido();
+
+    /*if (atributo1 != atributo2) {
+        compararAtributos();
+    }*/
 
     return 0;
 }
