@@ -243,6 +243,10 @@ void compararAtributoEscolhido()
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
         }
+        else
+        {
+            printf("\nEmpate!");
+        }
     }
     else if (atributo1 == 2)
     {
@@ -255,6 +259,10 @@ void compararAtributoEscolhido()
         {
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
+        }
+        else
+        {
+            printf("\nEmpate!");
         }
     }
     else if (atributo1 == 3)
@@ -271,7 +279,7 @@ void compararAtributoEscolhido()
         }
         else
         {
-            printf("\nTemos um empate!");
+            printf("\nEmpate!");
         }
     }
     else if (atributo1 == 4)
@@ -286,6 +294,10 @@ void compararAtributoEscolhido()
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
         }
+        else
+        {
+            printf("\nEmpate!");
+        }
     }
     else if (atributo1 == 5)
     {
@@ -298,6 +310,10 @@ void compararAtributoEscolhido()
         {
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
+        }
+        else
+        {
+            printf("\nEmpate!");
         }
     }
     else
@@ -352,6 +368,10 @@ void compararAtributoEscolhido()
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
         }
+        else
+        {
+            printf("\nEmpate!");
+        }
     }
     else if (atributo2 == 2)
     {
@@ -364,6 +384,10 @@ void compararAtributoEscolhido()
         {
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
+        }
+        else
+        {
+            printf("\nEmpate!");
         }
     }
     else if (atributo2 == 3)
@@ -378,6 +402,10 @@ void compararAtributoEscolhido()
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
         }
+        else
+        {
+            printf("\nEmpate!");
+        }
     }
     else if (atributo2 == 4)
     {
@@ -391,6 +419,10 @@ void compararAtributoEscolhido()
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
         }
+        else
+        {
+            printf("\nEmpate!");
+        }
     }
     else if (atributo2 == 5)
     {
@@ -403,6 +435,10 @@ void compararAtributoEscolhido()
         {
             printf("\nResultado: Segunda carta (%s) venceu!", nomeCidade2);
             pontosCidade2++;
+        }
+        else
+        {
+            printf("\nEmpate!");
         }
     }
     else
